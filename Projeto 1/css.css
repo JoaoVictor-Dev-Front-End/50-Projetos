@@ -1,61 +1,70 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-font-family: 'Muli', sans-serif;
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-overflow: hidden;
-margin: 0;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 .container {
-display: flex;
-width: 90vw;
+  display: flex;
+  width: 90vw;
 }
 
-.painel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: #fff;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: all 700ms ease-in;
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
 }
 
-.painel h3 {
-    font-size: 24px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
+.panel h3 {
+  font-size: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
 }
 
-.painel.active {
-    flex: 5;
+.panel.active {
+  flex: 5;
 }
 
-.painel.active h3 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 100vw;
-    }
+  .container {
+    width: 100vw;
+  }
 
-    .painel:ntn-of-type(4),
-    .painel:ntn-of-type(5){
-        display: none;
-    }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, #00843D, #FFCC29, #0000CD);
 }
